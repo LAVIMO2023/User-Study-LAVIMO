@@ -1,0 +1,79 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>User Study</title>
+		<link rel = "stylesheet" type = "text/css" href = "style.css" />
+        <script type="text/javascript" src="./function.js" ></script>
+	</head>
+ 
+	<body>
+		<div id='title'>
+        	<h1>User Study</h1>
+        </div>
+        <div id='instru'>
+            <label>1. Click "Start" button to start the user study</label><br>
+            <label>2. After viewing the video, rate the video by score 1-5 in "Visual Quality", "Lip-sync Acc" and "Fluency";</label><br>
+            <label>3. The meaning of score 1-5: 1-fake, 2-looks fake, 3-hard to judge, 4-looks real, 5-real;</label><br>
+            <label>4. After rating the video in 3 aspects, click the "Next" button to rate the next video;</label><br>
+            <label>5. The bottom "Progress" message shows the user study progress of all videos.</label>
+        </div>
+        <div id='content'>
+        	<div id='videos'>
+        		<video id='video' type="video/mp4" controls></video>
+        	</div>
+            <div id='rate'>
+                <form id='quality_form'>
+                    <label id="rate_name">Visual Quality:</label>
+                    <input type="radio" class="rate_radio" name="qual" onclick='cur_qual("1")' />
+                    <label for="1">1</label>
+                    <input type="radio" class="rate_radio" name="qual" onclick='cur_qual("2")' />
+                    <label for="2">2</label>
+                    <input type="radio" class="rate_radio" name="qual" onclick='cur_qual("3")' />
+                    <label for="3">3</label>
+                    <input type="radio" class="rate_radio" name="qual" onclick='cur_qual("4")' />
+                    <label for="4">4</label>
+                    <input type="radio" class="rate_radio" name="qual" onclick='cur_qual("5")' />
+                    <label for="5">5</label>
+                </form>
+                <form id='sync_form'>
+                    <label id="rate_name">Lip-sync Acc:&emsp;&nbsp;</label>
+                    <input type="radio" class="rate_radio" name="sync" onclick='cur_sync("1")' />
+                    <label for="1">1</label>
+                    <input type="radio" class="rate_radio" name="sync" onclick='cur_sync("2")' />
+                    <label for="2">2</label>
+                    <input type="radio" class="rate_radio" name="sync" onclick='cur_sync("3")' />
+                    <label for="3">3</label>
+                    <input type="radio" class="rate_radio" name="sync" onclick='cur_sync("4")' />
+                    <label for="4">4</label>
+                    <input type="radio" class="rate_radio" name="sync" onclick='cur_sync("5")' />
+                    <label for="5">5</label>
+                </form>
+                <form id='natural_form'>
+                    <label id="rate_name">Fluency:</label>
+                    <input type="radio" class="rate_radio" name="natu" onclick='cur_natu("1")' />
+                    <label for="1">1</label>
+                    <input type="radio" class="rate_radio" name="natu" onclick='cur_natu("2")' />
+                    <label for="2">2</label>
+                    <input type="radio" class="rate_radio" name="natu" onclick='cur_natu("3")' />
+                    <label for="3">3</label>
+                    <input type="radio" class="rate_radio" name="natu" onclick='cur_natu("4")' />
+                    <label for="4">4</label>
+                    <input type="radio" class="rate_radio" name="natu" onclick='cur_natu("5")' />
+                    <label for="5">5</label>
+                </form>
+            </div>
+            <div id='btns'>
+                <button id='start_btn' onclick='start()'>Start</button>
+                <button id='next_btn' onclick='next()'>Next</button>
+            </div>
+            <div id='info'>
+                <div id='progress'>Progress: 0%</div>
+                <div id='file_name'>Filename: </div>
+                <div id='result_qual'>Results of visual quality: </div>
+                <div id='result_sync'>Results of lip sync accuracy: </div>
+                <div id='result_natu'>Results of fluency: </div>
+            </div>
+        </div>
+	</body>
+ 
+</html>

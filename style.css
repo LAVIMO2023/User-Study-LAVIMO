@@ -1,0 +1,66 @@
+ #title{
+	text-align: center;
+	margin-top: 30px;
+}
+
+#instru{
+	margin: 0 auto;
+	width: 800px;
+	text-align: left;
+}
+
+#file_name, #result_qual, #result_sync, #result_natu{
+	visibility: hidden;
+}
+
+#content{
+	float: top;
+	width: 800px;
+	margin: 0 auto;
+}
+
+#videos{
+	float: top;
+}
+
+#videos, #rate, #info{
+	overflow: auto;
+	margin-top: 30px;
+}
+
+#video{
+	width: 800px;
+	height:300px;
+}
+
+#start_btn, #fname_list{
+	float: left;
+}
+
+#rate_name{
+  width:140px;
+  display: inline-block;
+}
+
+#rate{
+	float: top;
+}
+
+.rate_radio{
+	margin-left: 50px;
+}
+
+#submit{
+	float: top;
+}
+
+#next_btn, #dataset{
+	float: right;
+}
+
+
+
+
+
+
+

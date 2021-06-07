@@ -1,0 +1,79 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>视频打分</title>
+		<link rel = "stylesheet" type = "text/css" href = "style.css" />
+        <script type="text/javascript" src="./function.js" ></script>
+	</head>
+ 
+	<body>
+		<div id='title'>
+        	<h1>视频打分</h1>
+        </div>
+        <div id='instru'>
+            <label>1. 单击"开始"按钮开始测试</label><br>
+            <label>2. 先观看视频, 在视频下面3行分别对视频的视觉质量, 音画同步, 视频的自然程度评分1-5分</label><br>
+            <label>3. 评分1-5分的含义是1-很差,2-较差,3-一般(难辨真假),4-较好,5-很好</label><br>
+            <label>4. 每对一个视频的3项评分后点击"下一个"按键进入下一个视频的评分</label><br>
+            <label>5. 最下面的"进度"显示了进度, 所有的测试都做完, 3方面的测试结果会显示在"视觉质量", "音画同步","自然程度"</label>
+        </div>
+        <div id='content'>
+        	<div id='videos'>
+        		<video id='video' type="video/mp4" controls></video>
+        	</div>
+            <div id='rate'>
+                <form id='quality_form'>
+                    <label id="rate_name">视觉质量:</label>
+                    <input type="radio" class="rate_radio" name="qual" onclick='cur_qual("1")' />
+                    <label for="1">1</label>
+                    <input type="radio" class="rate_radio" name="qual" onclick='cur_qual("2")' />
+                    <label for="2">2</label>
+                    <input type="radio" class="rate_radio" name="qual" onclick='cur_qual("3")' />
+                    <label for="3">3</label>
+                    <input type="radio" class="rate_radio" name="qual" onclick='cur_qual("4")' />
+                    <label for="4">4</label>
+                    <input type="radio" class="rate_radio" name="qual" onclick='cur_qual("5")' />
+                    <label for="5">5</label>
+                </form>
+                <form id='sync_form'>
+                    <label id="rate_name">音画同步:</label>
+                    <input type="radio" class="rate_radio" name="sync" onclick='cur_sync("1")' />
+                    <label for="1">1</label>
+                    <input type="radio" class="rate_radio" name="sync" onclick='cur_sync("2")' />
+                    <label for="2">2</label>
+                    <input type="radio" class="rate_radio" name="sync" onclick='cur_sync("3")' />
+                    <label for="3">3</label>
+                    <input type="radio" class="rate_radio" name="sync" onclick='cur_sync("4")' />
+                    <label for="4">4</label>
+                    <input type="radio" class="rate_radio" name="sync" onclick='cur_sync("5")' />
+                    <label for="5">5</label>
+                </form>
+                <form id='natural_form'>
+                    <label id="rate_name">自然程度:</label>
+                    <input type="radio" class="rate_radio" name="natu" onclick='cur_natu("1")' />
+                    <label for="1">1</label>
+                    <input type="radio" class="rate_radio" name="natu" onclick='cur_natu("2")' />
+                    <label for="2">2</label>
+                    <input type="radio" class="rate_radio" name="natu" onclick='cur_natu("3")' />
+                    <label for="3">3</label>
+                    <input type="radio" class="rate_radio" name="natu" onclick='cur_natu("4")' />
+                    <label for="4">4</label>
+                    <input type="radio" class="rate_radio" name="natu" onclick='cur_natu("5")' />
+                    <label for="5">5</label>
+                </form>
+            </div>
+            <div id='btns'>
+                <button id='start_btn' onclick='start()'>开始</button>
+                <button id='next_btn' onclick='next()'>下一个</button>
+            </div>
+            <div id='info'>
+                <div id='progress'>进度: 0%</div>
+                <div id='file_name'>文件名: </div>
+                <div id='result_qual'>视觉质量: </div>
+                <div id='result_sync'>音画同步: </div>
+                <div id='result_natu'>自然程度: </div>
+            </div>
+        </div>
+	</body>
+ 
+</html>
