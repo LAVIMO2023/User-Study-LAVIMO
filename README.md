@@ -31,15 +31,3 @@ You can also edit `index.html` or `index_en.html` to customize the compared item
 
 - Server: Run `node app.js` to listen the port 9000 about the data of user study results. The results are saved in the file `results.txt`.
 - Client: Run `index.html` (Chines) or `index_en.html` (English) to conduct the user study.
-
-
-
-
-
-
-
-
-
-
-
-

@@ -24,13 +24,26 @@
 }
 
 #videos, #rate, #info{
+	text-align: center;
 	overflow: auto;
 	margin-top: 30px;
 }
 
 #video{
-	width: 800px;
+	width: 300px;
 	height:300px;
+}
+
+.select_video{
+	width: 600px;
+	height:300px;
+	flex-grow: 1;
+}
+
+.select_label{
+	width: 600px;
+	height:300px;
+	flex-grow: 1;
 }
 
 #start_btn, #fname_list{
@@ -38,7 +51,6 @@
 }
 
 #rate_name{
-  width:140px;
   display: inline-block;
 }
 
@@ -48,6 +60,7 @@
 
 .rate_radio{
 	margin-left: 50px;
+	flex-grow: 0.2;
 }
 
 #submit{
