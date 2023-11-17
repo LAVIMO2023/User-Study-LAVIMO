@@ -43,10 +43,10 @@ function show_content() {
     ).checked = true;
     cur_select = stack_select[video_idx];
   }
-  var path = video_dir + (video_idx_arr[video_idx] + 1) + "/" + question_name;
+  var path = video_dir + (video_idx_arr[video_idx]) + "/" + question_name;
   video_node.src = path;
   for (var i = 0; i < select_num; i++) {
-    select_node[i].src = video_dir + (video_idx_arr[video_idx] + 1) + "/" + select_names[i];
+    select_node[i].src = video_dir + (video_idx_arr[video_idx]) + "/" + select_names[i];
   }
 }
 
